@@ -156,6 +156,7 @@ timezone: Europe/Vienna # http://en.wikipedia.org/wiki/List_of_tz_database_time_
 
 # Plugins
 plugins:
+  - jekyll-remote-theme
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
@@ -234,5 +235,6 @@ defaults:
       related: true
 
 # minimal mistakes
-theme: minimal-mistakes-jekyll
+remote_theme: mmistakes/minimal-mistakes@4.12.0
+#theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
