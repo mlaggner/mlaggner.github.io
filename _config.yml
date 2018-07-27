@@ -238,3 +238,4 @@ defaults:
 remote_theme: mmistakes/minimal-mistakes@4.12.0
 #theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
+search: true
