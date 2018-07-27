@@ -1,0 +1,32 @@
+{% include base_path %}
+
+{% if page.summary or layout.summary %}
+  <div class="sidebar summary sticky">
+    {% for s in page.summary %}
+      {% if s.image %}
+        <div class="sidebar__image">
+          <img src=
+          {% if s.image contains "://" %}
+            "{{ s.image }}"
+          {% else %}
+            "{{ s.image | prepend: "/images/" | prepend: base_path }}"
+          {% endif %}
+          alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}">
+        </div>
+      {% endif %}
+      <h3>{{ page.title }}</h3>
+      <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %d, %Y" | markdownify }}</time>
+
+      <footer class="page__meta" style="font-size: .9em;">
+        {% if site.tag_archive.type and page.tags[0] %}
+          {% include tag-list.html %}
+        {% endif %}
+
+        {% if site.category_archive.type and page.categories[0] %}
+          {% include category-list.html %}
+        {% endif %}
+      </footer>
+
+    {% endfor %}
+  </div>
+{% endif %}
