@@ -11,7 +11,7 @@ tags:
   - sap
   - abap
 summary:
-  - image: sap.gif  
+  - image: sap.gif
 ---
 Im ersten Teil habe ich den groben Überblick über das Projekt erläutert. In diesem Teil konzentriere ich mich auf die Kommunikation zwischen dem SAP Netweaver Gateway 2.0 und dem SAP R3.
 
@@ -21,7 +21,7 @@ Als erstes muss ja die Transportnummer übergeben werden (zu welchem Beleg soll 
 
 Somit steht also die Schnittstelle vom RFC Baustein fest und dieser kann implementiert werden:
 
-```
+```abap
 FUNCTION zbc_file_upload_gateway.
 
 *"-----------------------------------------------

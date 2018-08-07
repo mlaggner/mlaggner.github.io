@@ -20,7 +20,7 @@ While Jekyll and its dependencies can be easily installed in Linux, Mac OSX and 
 
 Xcode is needed for Jekyll to run on OSX. Just install Xcode from the Mac App Store and start it once (agree to the terms and conditions). Once that is done, just take sure everything is installed by opening the `Terminal` (open Spotlight and type `terminal`) and enter
 
-```
+```shell
 $ xcode-select --install
 ```
 
@@ -28,8 +28,8 @@ $ xcode-select --install
 
 After installing Xcode you have all needed dependencies for running Jekyll. Just open up the `Terminal` (open Spotlight and type `terminal`) and enter
 
-```
-sudo gem install jekyll
+```shell
+$ sudo gem install jekyll
 ```
 
 This will install Jekyll and all of its Ruby dependencies.

@@ -2,7 +2,7 @@
 title: 'TransportPhotoUpload - Teil 4'
 categories:
   - programming
-tags:  
+tags:
   - html/javascript
   - sap
 summary:
@@ -16,7 +16,7 @@ Wie in den vorhergehenden Beiträgen beschrieben wurde, ist die Infrastruktur se
 
 Als erstes Stand ich vor dem Problem, dass die Binärdaten der Fotos nicht direkt übertragen werden können. Daher müssen diese Binärdaten mit BASE64 kodiert werden und der BASE64 String kann anschließend übertragen werden. Um Binärdaten in Javascript auf BASE64 zu konvertieren fand ich recht schnell einen Algorithmus, der auch im SAP wieder erfolgreich dekodiert werden konnte. Leider stellte sich beim Testen heraus, dass der Typ _Uint8Array_, der im Algorithmus verwendet wurde, erst ab Android 3 verfügbar ist. Ein alternativer Algorithmus funktionierte auch nicht, daher habe ich das Problem anders gelöst: In der PhoneGap API fand ich die Filesystem API, mit der ich das File direkt schon BASE64 kodiert auslesen konnte. Daher habe ich am Desktop die Fotos über einen XMLHttpRequest + händisches Kodieren in BASE64 und am mobilen Endgerät über die Filesystem API gelöst:
 
-```
+```javascript
 $.each( storageData, function(index, line) {
   if (line["type"] != "P")
     return;
@@ -62,10 +62,10 @@ $.each( storageData, function(index, line) {
 
 Somit kann am Desktop, sowie am mobilen Endgerät, das Foto in der Funktion _sendPicture_ erfolgreich versendet werden:
 
-```
+```javascript
 /*
-* send picture
-*/
+ * send picture
+ */
 
 function sendPicture(content, filename) {
   var target = "http://server:8042/sap/opu/sdata/sap/TRANSPORT_PHOTO_UPLOAD/ztransport_photo_uploadCollection";

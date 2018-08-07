@@ -14,8 +14,8 @@ The source of this problem are assertions: these are used by multi media apps to
 
 Recently I faced this problem again with Chrome - in one of the many open tabs such an assertion has been set. You can check this executing the command ```pmset -g assertions``` in the terminal. That looked like the following listing:
 
-```
-# pmset -g assertions
+```shell
+$ pmset -g assertions
 2017-02-16 16:48:14 +0100
 Assertion status system-wide:
  BackgroundTask                 1
@@ -36,7 +36,7 @@ Kernel Assertions: 0x4=USB
 
 In the past there has been the tool "Please Sleep" which could enforce the sleep mode on OSX, but that tool has been abandoned and does not work with OSX 10.10 onwards. So I decided to write a small shell script which does (almost) the same thing:
 
-```
+```shell
 #!/bin/bash
 
 # this will check how long before the system sleeps

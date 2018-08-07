@@ -16,10 +16,10 @@ Als ersten Schritt habe ich ein PhoneGap-Projekt für Android angelegt, wie es a
 
 Jetzt, nachdem die Grundzüge der Oberfläche erstellt wurden, kam es zur ersten Herausforderung: der Barcode auf dem Verladeschein muss gescannt werden und die Transportnummer wieder an die Applikation zurückgegeben werden. Gott sei dank gibt es für PhoneGap ein eigenes [Plugin](https://github.com/phonegap/phonegap-plugins/tree/master/Android/BarcodeScanner) zum Scannen von Barcodes. Diesen musste man zum einen in das PhoneGap Projekt integrieren (eigene Library) und die zusätzliche JavaScript Datei in der Webanwendung einfügen. Somit konnte das Plugin aus der HTML5 Applikation heraus aufgerufen werden:
 
-```
+```javascript
 /*
-* scan barcode
-*/
+ * scan barcode
+ */
 
 app.scan = function() {
   window.plugins.barcodeScanner.scan(function(result) {
@@ -33,12 +33,12 @@ app.scan = function() {
 
 Das nächste Problem kam aber gleich im Anschluß: am Desktop im Browser hatte man natürlich keinen Zugriff auf eine Kamera und somit kann man vom Barcodescanner keine Transportnummer bekommen. Dazu habe ich mir eine kleine Hilfe geschrieben: mittels einer Funktion prüfe ich ab, ob ich von einem Desktop aus das Programm ausführe und generiere in diesem Fall eine fiktive Nummer:
 
-```
+```javascript
 var isDesktop = ( navigator.platform.indexOf("Win") >= 0 );
 
 /*
-* scan barcode
-*/
+ * scan barcode
+ */
 
 app.scan = function() {
   if (isDesktop) {
@@ -58,12 +58,12 @@ Die Hilfe über _isDesktop_ half mir bei dem Projekt noch sehr oft, da man des �
 
 Da jetzt die Transportnummer richtig ermittelt wird, müssen die Fotos von der Kamera (bzw. Dateien am Desktop) geschossen werden:
 
-```
+```javascript
 var photoCount = 1;
 
 /*
-* take a picture
-*/
+ * take a picture
+ */
 
 app.takePicture = function() {
   if (isDesktop) {
@@ -80,10 +80,10 @@ app.takePicture = function() {
 
 Jetzt können nach erfolgreichem Anscannen des Verladescheins Fotos zu einem Transport geschossen werden. Bis jetzt läuft das Ganze aber nur einmal - man kann diesen Prozess noch nicht unterbrechen und nachträglich Fotos schießen. Dazu habe ich die Informationen zu angescannten Transporten und geschossenen Fotos in der lokalen Datenbank [jStorage](http://www.jstorage.info/) gespeichert. Da in dieser Datenbank nur Key/Value Paaere gespeichert werden können, musste ich zu einem Trick greifen, damit etwas komplexere Daten in dieser Datenbank gespeichert werden können. Sehen wir uns das am Beispiel des Schrittes nach dem Anscannen eines Barcodes an: hier werden alle bereits gespeicherten Fotos zu diesem Transport ausgelesen und dargestellt.
 
-```
+```javascript
 /*
-* navigate to detail screen
-*/
+ * navigate to detail screen
+ */
 
 app.navigateToTransport = function(transport) {
   if (transport > "") {
@@ -115,10 +115,10 @@ app.navigateToTransport = function(transport) {
 
 Und hier noch am Beispiel vom Foto schießen:
 
-```
+```javascript
 /*
-* picture sucessfully taken
-*/
+ * picture sucessfully taken
+ */
 
 function onTakePictureSuccess(imageURI) {
   var date = new Date();
