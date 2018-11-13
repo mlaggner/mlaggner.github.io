@@ -147,8 +147,8 @@ Auf diese Weise hat kann man auch eine Historie erstellen, welche Transporte in 
 
 Anbei noch 2 Screenshots, wie diese Applikation im Browser aussieht:
 
-<figure><a href="/images/2012/05/gui_1.png"><img src="/images/2012/05/gui_1.png" alt="Einstiegsbild mit Historie"></a></figure>
-<figure><a href="/images/2012/05/gui_2.png"><img src="/images/2012/05/gui_2.png" alt="einzelner Transport mit Fotos"></a></figure>
+![Einstiegsbild mit Historie](/images/2012/05/gui_1.png){: .align-center}
+![einzelner Transport mit Fotos](/images/2012/05/gui_2.png){: .align-center}
 
 Diese Beispiele sind nur Auszüge (das ganze Coding wäre zu lang), ich kann aber gerne bei Fragen weiterhelfen. Bitte mich dazu einfach kontaktieren oder kommentieren.
 

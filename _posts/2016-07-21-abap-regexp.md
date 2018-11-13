@@ -47,4 +47,5 @@ ENDIF.
 ```
 
 Testing regular expressions for ABAP is also super easy with the demo program `DEMO_REGEX_TOY`:
-<figure><a href="/images/2016/07/demo_regex_toy.png"><img src="/images/2016/07/demo_regex_toy.png" alt="DEMO_REGEX_TOY"></a></figure>
+
+![DEMO_REGEX_TOY](/images/2016/07/demo_regex_toy.png){: .align-center}
