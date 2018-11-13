@@ -69,7 +69,7 @@ Having this script, you can set up a backup of your config files with a few comm
     Initial commit
 
     Untracked files:
-    (use "git add <file>..."" to include in what will be committed)
+    (use "git add <file>..." to include in what will be committed)
 
         config_files.txt
         etc/
