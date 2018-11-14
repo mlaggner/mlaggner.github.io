@@ -18,7 +18,7 @@ Die Idee, diesen Prozess zu optimieren, wäre folgende: der Mitarbeiter an der V
 
 Durch die Beschreibung merkt man schon, dass dieses Projekt recht komplex ist und auch viele Teilbereiche umspannt. Daher werde ich die einzelnen Teile des Projektes ein extra Beiträgen beschreiben. Hier im ersten Teil werde ich auf die grundsätzlichen Aufbau eingehen.
 
-<figure><a href="/images/2012/05/ablauf_tpu.gif"><img src="/images/2012/05/ablauf_tpu.gif" alt="Ablauf_TransportPhotoUpload"></a></figure>
+![Ablauf_TransportPhotoUpload](/images/2012/05/ablauf_tpu.gif){: .align-center}
 
 1. Der Mitarbeiter an der Verladung scannt den Verladeschein
 2. Der Mitarbeiter an der Verladung macht Fotos von dem LKW/Waggon

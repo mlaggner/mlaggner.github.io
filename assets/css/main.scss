@@ -4,6 +4,9 @@
 
 @charset "utf-8";
 
+$link-color: #ff850b;
+$top-offset: 4em;
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
@@ -34,4 +37,41 @@
   @include breakpoint($large) {
     display: inherit;
   }
+}
+
+p>code, li>code {
+  background-color: #f3ecee!important;
+  color: #c7254e;
+}
+
+.masthead {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #f2f3f3;  // set a color to hide content that may appear below masthead
+
+  @media (min-width: 48em) {
+    .masthead {
+      height: $top-offset;  // need a magic number here which may break in different viewports
+    }
+    .masthead__inner-wrap {
+      padding: 0.5em;
+    }
+  }
+}
+
+.masthead__inner-wrap {
+  padding: 0em 0em 0em 0.5em;
+}
+
+body {
+  padding: $top-offset 0 0;  // padding-top equal to masthead height or greater
+}
+
+.greedy-nav {
+  background: #f2f3f3;
+}
+
+.sticky {
+  top: $top-offset;
 }

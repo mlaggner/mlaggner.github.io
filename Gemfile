@@ -13,7 +13,7 @@ source "https://rubygems.org"
 gem "jekyll", "~> 3.8.3" if Gem.win_platform?
 
 ## github
-gem "github-pages", group: :jekyll_plugins if !Gem.win_platform?
+#gem "github-pages", group: :jekyll_plugins if !Gem.win_platform?
 
 # to load the minimal mistakes theme directly from GitHub
 gem "jekyll-remote-theme"
@@ -31,7 +31,6 @@ group :jekyll_plugins do
   gem "jekyll-paginate"
   gem "jekyll-sitemap"
   gem "jekyll-gist"
-  gem "jekyll-feed", "~> 0.6"
   gem "jemoji"
 end
 

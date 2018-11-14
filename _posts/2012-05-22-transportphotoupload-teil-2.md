@@ -89,12 +89,12 @@ Den Parameter _iv_debug_ verwende ich gerne zum debuggen eines RFC Bausteins. Wi
 
 Der Parameter _iv_logic_ kann verwendet werden, um die tatsächliche Logik, was mit der hochgeladenen Datei zu tun ist, anzuspringen. Wie man am Namen des Funktionsbausteins sieht, kann dieser für jegliches Hochladen einer Datei verwendet werden; nur die Weiterverarbeitung der Datei (z.B. das Anhängen an einen Transportbeleg) hängt vom jeweiligen Prozess ab.
 
-Der Funktionsbaustein _SSFC_BASE64_DECODE _wird verwendet, um die Binärdaten (für die Übertragung im Web mit BASE64 codiert) des Fotos wieder in ihre binäre Form zu konvertieren.
+Der Funktionsbaustein _SSFC_BASE64_DECODE_ wird verwendet, um die Binärdaten (für die Übertragung im Web mit BASE64 codiert) des Fotos wieder in ihre binäre Form zu konvertieren.
 
 Somit wäre die Arbeit auf dem SAP R3 System erledigt. Jetzt muss der Service (inkl. RFC-Aufruf im R3) noch am SAP Netweaver Gateway 2.0 eingerichtet werden. Wie man Grundsätzlich einen Service im SAP Netweaver Gateway 2.0 einrichtet, habe ich bereits in diesem [Beitrag](/2012/01/sap-netweaver-gateway-2-0) geschrieben.
 
-Ich habe das Datenmodell _ZTRANSPORT_PHOTO_UPLOAD _angelegt und dazu die Operation _CREATE_ mit folgendem Mapping zum RFC Baustein _ZBC_FILE_UPLOAD_GATEWAY_ erstellt:
+Ich habe das Datenmodell _ZTRANSPORT_PHOTO_UPLOAD_ angelegt und dazu die Operation _CREATE_ mit folgendem Mapping zum RFC Baustein _ZBC_FILE_UPLOAD_GATEWAY_ erstellt:
 
-<figure><a href="/images/2012/05/mapping_file_upload.png"><img src="/images/2012/05/mapping_file_upload.png" alt="Gateway mapping"></a></figure>
+![Gateway mapping](/images/2012/05/mapping_file_upload.png){: .align-center}
 
 Anschließend habe ich noch ein Consumption Model zu diesem Datenmodell angelegt und somit kann der RFC-Baustein über den SAP Netweaver Gateway 2.0 von einem mobilen Endgerät aus aufgerufen werden.
