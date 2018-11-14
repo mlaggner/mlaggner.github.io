@@ -211,7 +211,6 @@ defaults:
       type: posts
     values:
       layout: post
-      classes: wide
       author_profile: false
       read_time: true
       comments: false
