@@ -10,7 +10,7 @@ summary:
 ---
 Im letzten Teil dieser Serie beschreibe ich, wie die Kommunikation zwischen dem Endgerät (HTML/Javascript) und dem SAP Netweaver Gateway 2.0 stattfindet.
 
-Die Datenübertragung zwischen Javascript und dem SAP Netweaver Gateway 2.0 erfolgt mittels dem OData Protokoll. Eine Anleitung, wie man von Javascript mit dem OData Protokoll auf den SAP Netweaver Gateway 2.0 zugreifen kann, habe ich bereits in einem [Beitrag](/2012/01/via-htmljavascript-auf-sap-netweaver-gateway-2-0) geschrieben. Auch das Problem mit dem Cross Domain Requests wird dort behandelt. Daher können wir uns direkt der Datenübertragung widmen.
+Die Datenübertragung zwischen Javascript und dem SAP Netweaver Gateway 2.0 erfolgt mittels dem OData Protokoll. Eine Anleitung, wie man von Javascript mit dem OData Protokoll auf den SAP Netweaver Gateway 2.0 zugreifen kann, habe ich bereits in einem [Beitrag](/via-htmljavascript-auf-sap-netweaver-gateway-2-0) geschrieben. Auch das Problem mit dem Cross Domain Requests wird dort behandelt. Daher können wir uns direkt der Datenübertragung widmen.
 
 Wie in den vorhergehenden Beiträgen beschrieben wurde, ist die Infrastruktur seitens SAP bereits eingerichtet und das HTML Programm soweit realisiert, dass der Barcode gescannt und die Fotos geschossen werden können. Jetzt müssen diese Fotos inkl. Metadaten ans SAP übertragen werden.
 
@@ -103,7 +103,7 @@ An dieser Stelle sind die Grundzüge dieses Programmes fertig, und es bedarf nur
 
 Zusammenfassend biete ich noch eine Übersicht über die Probleme, über diese ich bei dem Programm gestolpert bin:
 
-* Cross Domain Requests: Vor allem bei der Entwicklung und dem Testen am Browser war das ein massives Problem. Abhilfe schafft ein Proxy am PC (siehe diesen [Beitrag](/2012/01/via-htmljavascript-auf-sap-netweaver-gateway-2-0))
+* Cross Domain Requests: Vor allem bei der Entwicklung und dem Testen am Browser war das ein massives Problem. Abhilfe schafft ein Proxy am PC (siehe diesen [Beitrag](/via-htmljavascript-auf-sap-netweaver-gateway-2-0))
 * BASE64 kodieren von Binärdaten:  wenn die Binärdaten über einen XMLHttpRequest geladen und von diesem binären Format konvertiert werden, dann ist der Typ _Uint8Array_ nötig. Dieser Typ ist jedoch erst ab Android 3 verfügbar - also für Android Handys nicht verfügbar.
 * Android:
   * _Uint8Array_ bei Android 2.x Handys nicht verfügbar

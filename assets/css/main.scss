@@ -4,8 +4,8 @@
 
 @charset "utf-8";
 
-$link-color: #ff850b;
-$top-offset: 4em;
+
+$top-offset: 3em;
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
@@ -97,6 +97,12 @@ html {
   font-size: $type-size-7;
   text-align: right;
   a {
-    padding: 0 1em;  
+    padding: 0 1em;
   }
+}
+
+.archive__item-title {
+  a {
+     color: inherit;
+   }
 }
