@@ -65,7 +65,13 @@ p>code, li>code {
 }
 
 body {
-  padding: $top-offset 0 0;  // padding-top equal to masthead height or greater
+  padding: #{$top-offset - 1} 0 0;  // padding-top equal to masthead height or greater
+}
+
+@media (min-width: 48em) {
+  body {
+    padding: $top-offset 0 0;  // padding-top equal to masthead height or greater
+  }
 }
 
 @media (min-width: 64em) {
