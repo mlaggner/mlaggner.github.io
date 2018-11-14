@@ -68,6 +68,13 @@ body {
   padding: $top-offset 0 0;  // padding-top equal to masthead height or greater
 }
 
+@media (min-width: 64em) {
+  .sidebar__right.sticky {
+    top: #{$top-offset+2};
+    float: right;
+  }
+}
+
 .greedy-nav {
   background: #f2f3f3;
 }
