@@ -91,3 +91,12 @@ html {
     font-size: 20px;
   }
 }
+
+.page__footer-links {
+  font-family: $global-font-family;
+  font-size: $type-size-7;
+  text-align: right;
+  a {
+    padding: 0 1em;  
+  }
+}
