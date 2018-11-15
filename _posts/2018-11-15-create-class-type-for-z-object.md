@@ -15,7 +15,7 @@ For a new project we had the requirement to attach the classification system to 
 Table: **ZPLANNING_BATCH**
 * Fields
   * MANDT (MANDT)
-  * BATCH_ID (ZPLANNING_BATCH_ID)
+  * ZZBATCH_ID (ZPLANNING_BATCH_ID)
 
 Data-Element:
 * ZPLANNING_BATCH_ID:
@@ -36,6 +36,8 @@ After creating the table, you need to go to the customizing (transaction `SPRO`)
 ![SPRO - Define Object Keys](/images/2018/11/SPRO1.png){: .align-center}
 
 Here you can create a new entry for your Z-table and enter all needed values (transaction code for maintaining the objects from your table, the table itself, a text table and the key fields)
+
+If you have entered key fields which are not SAP standard fields (like ZZBATCH_ID from the example above), you have to append these fields to the structure RMCLF (see the [SAP note 2419619](https://launchpad.support.sap.com/#/notes/2419619)).
 
 ## 3. Adding object table
 
