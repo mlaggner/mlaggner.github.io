@@ -26,7 +26,7 @@ The first problem (identify all needed DDIC objects for translations) was rather
 For the second problem I had to dig a bit deeper, since there is no official interface between SAP and Weblate. Weblate itself only uses different source code management tools like [Git](https://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/) and [Subversion](https://subversion.apache.org/
 ) to import and export translations.
 
-![Weblate workflow](/images/2018/11/weblate_workflow.png)
+![Weblate workflow](/images/2018/11/weblate_workflow.png){: .align-center}
 
 1. Import translations from Git
 2. Translate in Weblate
@@ -39,7 +39,7 @@ To export those generated XLIFF files to Git you either need the Git toolkit ins
 
 With the XLIFF export/import functions from SAP and the API from Gitlab we were able to create a workflow which allows us to fully integrate Weblate into the SAP translation workflow.
 
-![Weblate workflow](/images/2018/11/sap_weblate_workflow.png)
+![Weblate workflow](/images/2018/11/sap_weblate_workflow.png){: .align-center}
 
 1. Export Translations from SAP (XLIFF)
 2. Import translations from Git
