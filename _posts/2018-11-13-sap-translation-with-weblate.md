@@ -1,5 +1,4 @@
 ---
-id: 317
 title: 'SAP DDIC translation with Weblate - Part 1'
 categories:
   - programming

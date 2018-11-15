@@ -1,5 +1,4 @@
 ---
-id: 317
 title: 'TransportPhotoUpload - Teil 1'
 categories:
   - programming
