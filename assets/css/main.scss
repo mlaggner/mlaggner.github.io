@@ -123,3 +123,13 @@ html {
 ins.adsbygoogle {
   border-bottom: none !important;
 }
+
+.btn--reddit, .btn--reddit:visited {
+    background-color: $reddit-color;
+    color: #fff;
+}
+
+.btn--tumblr, .btn--tumblr:visited {
+    background-color: $tumblr-color;
+    color: #fff;
+}
