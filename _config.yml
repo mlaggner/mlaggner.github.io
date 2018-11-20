@@ -60,10 +60,10 @@ analytics:
 author:
   name             : "Manuel Laggner"
   avatar           : "/images/purple.png"
-  bio              : "technic freak, linux user and programmer"
+  bio              : "technic freak, linux user, developer (Java/ABAP) and the founder of the tool <a href=\"https://www.tinymediamanager.org\">tinyMediaManager</a>."
   location         : "Austria"
   email            :
-  uri              :
+  uri              : "https://www.laggner.at"
   bitbucket        :
   codepen          :
   dribbble         :
@@ -71,6 +71,7 @@ author:
   facebook         :
   foursquare       :
   github           : "mlaggner"
+  gitlab           : "mlaggner"
   google_plus      :
   keybase          :
   instagram        :
@@ -86,6 +87,7 @@ author:
   weibo            :
   xing             : "Manuel_Laggner"
   youtube          :
+  paypal           : "ManuelLaggner"
 
 
 # Reading Files
@@ -211,7 +213,7 @@ defaults:
       type: posts
     values:
       layout: post
-      author_profile: false
+      author_profile: true
       read_time: true
       comments: false
       share: true

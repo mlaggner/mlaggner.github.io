@@ -1,0 +1,51 @@
+.page__author {
+  @extend .page__meta;
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid #f2f3f3;
+}
+
+.author__bottom {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid $border-color;
+}
+
+.author__bottom__avatar {
+  display: table-cell;
+  vertical-align: top;
+  width: 48px;
+  height: 48px;
+
+  @include breakpoint($large) {
+    width: 110px;
+    height: 110px;
+  }
+
+  img {
+    max-width: 110px;
+    width: 100%;
+  }
+}
+
+.author__bottom__name {
+  margin: 0;
+
+  @include breakpoint($large) {
+    margin-bottom: 10px;
+  }
+}
+
+.author__bottom__content {
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 15px;
+  padding-right: 25px;
+  line-height: 1;
+}
+
+.author__bottom__urls {
+  margin-top: 10px;
+
+
+}

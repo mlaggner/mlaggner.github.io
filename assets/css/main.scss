@@ -9,6 +9,7 @@ $top-offset: 3em;
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+@import "author-bottom"; // bottom author styles
 
 .sidebar__image {
   display: table-cell;
@@ -124,12 +125,39 @@ ins.adsbygoogle {
   border-bottom: none !important;
 }
 
-.btn--reddit, .btn--reddit:visited {
-    background-color: $reddit-color;
-    color: #fff;
+// more button colors
+.btn {
+  /* button colors */
+  $buttoncolors:
+  (reddit, $reddit-color),
+  (tumblr, $tumblr-color),
+  (xing, $xing-color),
+  (github, $github-color),
+  (gitlab, $gitlab-color);
+
+  @each $buttoncolor, $color in $buttoncolors {
+    &--#{$buttoncolor} {
+      @include yiq-contrasted($color);
+      @if ($buttoncolor == inverse) {
+        border: 1px solid $border-color;
+      }
+      @if ($buttoncolor == light-outline) {
+        border: 1px solid #fff;
+      }
+
+      &:visited {
+        @include yiq-contrasted($color);
+      }
+
+      &:hover {
+        @include yiq-contrasted(mix(#000, $color, 20%));
+      }
+    }
+  }
 }
 
-.btn--tumblr, .btn--tumblr:visited {
-    background-color: $tumblr-color;
-    color: #fff;
+// bigger social icons
+.btn > .fa-fw {
+  height: 1.5em;
+  vertical-align: -.375em;
 }
