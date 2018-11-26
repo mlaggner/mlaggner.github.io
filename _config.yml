@@ -56,10 +56,6 @@ analytics:
   google:
     tracking_id          :
 
-# Ads
-head_scripts:
-  - /assets/js/ads.js
-
 # Site Author
 author:
   name             : "Manuel Laggner"
@@ -163,6 +159,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-include-cache
 
 
 # mimic GitHub Pages with --safe
@@ -222,6 +219,7 @@ defaults:
       comments: false
       share: true
       related: true
+      ads: true
   # _pages
   - scope:
       path: ""
@@ -233,9 +231,10 @@ defaults:
       comments: false
       share: false
       related: true
+      ads: false
 
 # minimal mistakes
-remote_theme: mmistakes/minimal-mistakes@4.13.0
+remote_theme: mmistakes/minimal-mistakes@4.14.0
 #theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 search: true
