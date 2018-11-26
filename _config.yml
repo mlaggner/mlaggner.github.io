@@ -56,6 +56,10 @@ analytics:
   google:
     tracking_id          :
 
+# Ads
+head_scripts:
+  - /assets/js/ads.js
+
 # Site Author
 author:
   name             : "Manuel Laggner"
