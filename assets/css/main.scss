@@ -129,6 +129,15 @@ html {
   margin-bottom: 1em;
 }
 
+.toc__category,
+.toc__recent {
+  display: none;
+
+  @include breakpoint($large) {
+    display: inherit;
+  }
+}
+
 ins.adsbygoogle {
   border-bottom: none !important;
 }

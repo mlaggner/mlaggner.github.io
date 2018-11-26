@@ -37,7 +37,7 @@ layout: default
       <section class="page__content" itemprop="text">
 
         <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
-          <nav class="toc">
+          <nav class="toc toc__category">
             <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> Contents by category </h4></header>
             {% include group-by-array collection=site.posts field="categories" %}
             <ul class="toc__menu">
@@ -47,7 +47,7 @@ layout: default
               {% endfor %}
             </ul>
           </nav>
-          <nav class="toc">
+          <nav class="toc toc__recent">
             <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> Recent posts </h4></header>
               <ul class="toc__menu">
                 {% for post in site.posts limit:10 %}
