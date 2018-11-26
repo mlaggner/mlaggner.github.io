@@ -5,7 +5,7 @@ categories:
 tags:
   - macOS
 summary:
-  - image: osx.png  
+  - image: apple.png  
 ---
 Manchmal ist es in Mac OSX nötig, ein Programm mit Superuser-Rechten zu starten. Wenn das Programm nicht von alleine dieses Recht anfordert, steht man vor einem Problem. Es ist dennoch über einen kleinen Umweg möglich, ein Programm als Superuser zu starten. Dazu sind folgende Schritte nötig:<!--more-->
 

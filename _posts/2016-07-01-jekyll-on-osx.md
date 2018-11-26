@@ -7,7 +7,7 @@ tags:
   - macOS
   - jekyll
 summary:
-  - image: osx.png
+  - image: apple.png
 ---
 While Jekyll and its dependencies can be easily installed in Linux, Mac OSX and Windows need some more work to get a local Jekyll running.<more>
 

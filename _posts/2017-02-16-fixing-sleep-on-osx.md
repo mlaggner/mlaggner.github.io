@@ -6,7 +6,7 @@ tags:
   - macOS
   - shellscript
 summary:
-  - image: osx.png
+  - image: apple.png
 ---
 Automatic suspend to RAM (aka sleep or energy saving) has always been problematic on my wife's iMac: Her iMac did not go to sleep mode on idle or woke up accidentally and did not fell asleep again.
 
