@@ -1,10 +1,5 @@
 ---
 title: 'TransportPhotoUpload - Teil 2'
-date: 2012-05-22T10:34:40+00:00
-author: Manuel
-layout: post
-guid: http://blog.laggner.at/?p=329
-permalink: /2012/05/transportphotoupload-teil-2/
 categories:
   - programming
 tags:

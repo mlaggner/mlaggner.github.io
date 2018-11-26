@@ -1,9 +1,9 @@
 ---
 title: "Fixing automatic sleep on OSX 10.10+"
 categories:
-  - osx
+  - macOS
 tags:
-  - osx
+  - macOS
   - shellscript
 summary:
   - image: osx.png

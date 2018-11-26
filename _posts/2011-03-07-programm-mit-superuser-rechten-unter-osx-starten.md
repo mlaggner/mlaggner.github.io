@@ -1,9 +1,9 @@
 ---
 title: Programm mit Superuser-Rechten unter OSX starten
 categories:
-  - osx
+  - macOS
 tags:
-  - osx
+  - macOS
 summary:
   - image: osx.png  
 ---

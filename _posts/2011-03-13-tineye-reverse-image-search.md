@@ -1,7 +1,7 @@
 ---
 title: 'TinEye - Reverse Image Search'
 categories:
-  - Allgemein
+  - misc
 summary:
   - image: 2011/03/tineye.png  
 ---

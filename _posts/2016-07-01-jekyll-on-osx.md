@@ -1,10 +1,10 @@
 ---
 title: "Jekyll on OSX"
 categories:
-  - osx
+  - macOS
   - jekyll
 tags:
-  - osx
+  - macOS
   - jekyll
 summary:
   - image: osx.png
