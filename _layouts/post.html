@@ -43,7 +43,7 @@ layout: default
             <ul class="toc__menu">
               {% for category in group_names %}
                 {% assign posts = group_items[forloop.index0] %}
-                <li><a href="{{ base_path }}categories/#{{ category | slugify }}">{{ category }}</a></li>
+                <li><a href="{{ category | slugify | prepend: path_type | prepend: site.category_archive.path | relative_url }}">{{ category }}</a></li>
               {% endfor %}
             </ul>
           </nav>
