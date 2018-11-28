@@ -1,22 +1,64 @@
-{% if page.sidebar %}
+{% if page.nav or page.summary %}
   <div class="sidebar sticky">
-  {% if page.sidebar %}
-    {% for s in page.sidebar %}
-      {% if s.image %}
+  {% for s in page.summary %}
+    {% if s.image %}
+      <div class="sidebar__image">
         <img src=
         {% if s.image contains "://" %}
           "{{ s.image }}"
         {% else %}
-          "{{ s.image | relative_url }}"
+          "{{ s.image | prepend: "/images/" | prepend: base_path }}"
         {% endif %}
         alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}">
-      {% endif %}
-      {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
-      {% if s.text %}{{ s.text | markdownify }}{% endif %}
-    {% endfor %}
-    {% if page.sidebar.nav %}
-      {% include nav_list nav=page.sidebar.nav %}
+      </div>
     {% endif %}
+    <h3>{{ page.title }}</h3>
+    <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %d, %Y" | markdownify }}</time>
+
+    <div class="page__meta" style="font-size: .9em;">
+      {% if site.tag_archive.type and page.tags[0] %}
+        {% include tag-list.html %}
+      {% endif %}
+
+      {% if site.category_archive.type and page.categories[0] %}
+        {% include category-list.html %}
+      {% endif %}
+    </div>
+
+  {% endfor %}
+  {% if page.nav %}
+    <nav class="nav__list">
+      <ul class="nav__items">
+        <li><span class="nav__sub-title">Posts by category</span>
+          <ul>
+            {% include group-by-array collection=site.posts field="categories" %}
+            {% for category in group_names %}
+              {% assign posts = group_items[forloop.index0] %}
+              <li><a href="{{ category | slugify | prepend: path_type | prepend: site.category_archive.path | relative_url }}">{{ category }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+        <li>
+          <span class="nav__sub-title">Recent posts</span>
+            <ul>
+              {% for post in site.posts limit:10 %}
+                <li>
+                  {% if post.id %}
+                    {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+                  {% else %}
+                    {% assign title = post.title %}
+                  {% endif %}
+                  {% if post.link %}
+                    <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+                  {% else %}
+                    <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          </li>
+      </ul>
+    </nav>
   {% endif %}
   </div>
 {% endif %}

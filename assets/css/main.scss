@@ -32,7 +32,7 @@ $top-offset: 3em;
   }
 }
 
-.summary {
+.sidebar {
   display: none;
 
   @include breakpoint($large) {

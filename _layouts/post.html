@@ -15,7 +15,6 @@ layout: default
 {% endif %}
 
 <div id="main" role="main">
-  {% include summary.html %}
   {% include sidebar-post.html %}
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
@@ -35,39 +34,14 @@ layout: default
       {% endunless %}
 
       <section class="page__content" itemprop="text">
-
-        <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
-          <nav class="toc toc__category">
-            <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> Contents by category </h4></header>
-            {% include group-by-array collection=site.posts field="categories" %}
-            <ul class="toc__menu">
-              {% for category in group_names %}
-                {% assign posts = group_items[forloop.index0] %}
-                <li><a href="{{ category | slugify | prepend: path_type | prepend: site.category_archive.path | relative_url }}">{{ category }}</a></li>
-              {% endfor %}
-            </ul>
-          </nav>
-          <nav class="toc toc__recent">
-            <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> Recent posts </h4></header>
-              <ul class="toc__menu">
-                {% for post in site.posts limit:10 %}
-                  <li>
-                    {% if post.id %}
-                      {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
-                    {% else %}
-                      {% assign title = post.title %}
-                    {% endif %}
-                    {% if post.link %}
-                      <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
-                    {% else %}
-                      <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
-                    {% endif %}
-                  </li>
-                {% endfor %}
-              </ul>
-          </nav>
-        </aside>
-
+        {% if page.toc %}
+          <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label }}</h4></header>
+              {% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" %}
+            </nav>
+          </aside>
+        {% endif %}
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>

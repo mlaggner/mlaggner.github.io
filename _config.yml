@@ -220,6 +220,8 @@ defaults:
       share: true
       related: true
       ads: true
+      nav: true
+      classes: wide
   # _pages
   - scope:
       path: ""
