@@ -178,3 +178,10 @@ ins.adsbygoogle {
   height: 1.5em;
   vertical-align: -.375em;
 }
+
+// border and spacing in the nav nav__list
+.nav__sub{
+  border-bottom: 1px solid #f2f3f3;
+  padding-bottom: 0.25em;
+  margin-bottom: 0.25em;
+}

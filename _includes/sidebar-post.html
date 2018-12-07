@@ -29,20 +29,11 @@
   {% if page.nav %}
     <nav class="nav__list">
       <ul class="nav__items">
-        <li><span class="nav__sub-title">Posts by category</span>
-          <ul>
-            {% include group-by-array collection=site.posts field="categories" %}
-            {% for category in group_names %}
-              {% assign posts = group_items[forloop.index0] %}
-              <li><a href="{{ category | slugify | prepend: path_type | prepend: site.category_archive.path | relative_url }}">{{ category }}</a></li>
-            {% endfor %}
-          </ul>
-        </li>
         <li>
           <span class="nav__sub-title">Recent posts</span>
             <ul>
               {% for post in site.posts limit:10 %}
-                <li>
+                <li class="nav__sub">
                   {% if post.id %}
                     {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
                   {% else %}
