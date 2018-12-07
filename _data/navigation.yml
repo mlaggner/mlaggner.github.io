@@ -4,7 +4,13 @@ main:
     url: /about/
   - title: "blog archive"
     url: /archive/
-  - title: "categories"
-    url: /categories/
-  - title: "tags"
-    url: /tags/
+
+archive:
+  - title: "blog archive"
+    children:
+      - title: "by date"
+        url: /archive/
+      - title: "by category"
+        url: /categories/
+      - title: "by tag"
+        url: /tags/
