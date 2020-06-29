@@ -236,7 +236,7 @@ defaults:
       ads: false
 
 # minimal mistakes
-remote_theme: mmistakes/minimal-mistakes@4.14.0
+remote_theme: mmistakes/minimal-mistakes@4.19.3
 #theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 search: true
