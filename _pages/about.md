@@ -13,6 +13,4 @@ In October 2002 I started my bachelor degree course (_computer and media securit
 
 After finishing my bachelors degree I started with my masters degree (_secure information systems_) in October 2005 (Hagenberg). In the last semester I wrote my thesis about _detecting virtual machine based rootkits_. Side by side with writing my thesis I worked at the KPMG in Linz (Upper Austria - Austria) in the department _forensics_. I finished my masters degree with excellent success in July 2007.
 
-Since August 2007 I work at EGGER Holzwerkstoffe in St. Johann in Tirol (Tirol - Austria) as a developer/software architect for SAP systems.
-
-Since summer 2012 I also work on an open source project in (made in Java/Swing) in my spare time.
+Since August 2007 I work at _FRITZ EGGER GmbH & Co. OG_ in St. Johann in Tirol (Tirol - Austria) as a developer/software architect for SAP systems.
